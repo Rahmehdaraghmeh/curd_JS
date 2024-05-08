@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD System</title>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="asset/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="add-course">
+
+        <div class="container">
+
+            <h1>CRUD System</h1>
+
+            <label for="">course name</label>
+            <input class="inputs" type="text" placeholder="course name" id="courseName">
+            <div class="error"> Please start with Capital later </div>
+            <label for="">course category</label>
+            <input class="inputs" type="text" placeholder="course category" id="courseCategory">
+
+            <label for="">course price</label>
+            <input class="inputs" type="number" placeholder="course price" id="coursePrice">
+
+            <label for="">course description</label>
+            <textarea class="inputs" id="courseDescription"></textarea>
+
+            <button onclick="createCourse()">Add Course</button>
+            <button onclick="clearInput()">clear</button>
+
+
+
+        </div>
+
+        <input type="search" placeholder="search... " id="search" onkeyup="searchCourse()">
+
+
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>#</th>
+
+
+                    <th>name</th>
+                    <th>Category</th>
+                    <th>price</th>
+                    <th>description</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+
+            <tbody id="data">
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
